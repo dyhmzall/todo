@@ -8,3 +8,6 @@ class Users(models.Model):
     firstname = models.CharField(max_length=128)
     lastname = models.CharField(max_length=128)
     email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.username
