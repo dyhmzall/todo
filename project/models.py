@@ -4,7 +4,7 @@ from users.models import Users
 
 
 class Project(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid4())
+    id = models.UUIDField(primary_key=True, default=uuid4)
     name = models.CharField(max_length=128)
     repository = models.URLField(blank=True)
     users = models.ManyToManyField(Users)
@@ -14,7 +14,7 @@ class Project(models.Model):
 
 
 class Todo(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid4())
+    id = models.UUIDField(primary_key=True, default=uuid4)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
