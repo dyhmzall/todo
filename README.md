@@ -10,3 +10,11 @@
 
 - применить миграции
 > python manage.py migrate
+
+- установить зависимости
+> pip install -r requirements.txt
+
+- запустить контейнер
+> docker-compose up
+
+ 
